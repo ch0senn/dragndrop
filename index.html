@@ -1242,20 +1242,19 @@
             <a-entity id="gg1" gltf-model="#cadboxx-floor" position="0 0 0" rotation="0 0 0" static-body visible="false"></a-entity>
             <a-entity id="gg2" gltf-model="#floor-t" position="0 0 0" rotation="0 0 0" static-body visible="true"></a-entity>
             
-            <a-entity id="glb01" gltf-model="#cb1" mixin="" position="9 0 0" rotation="0 0 45" scale="5 5 5" static-body></a-box>
+            <a-entity id="glb01" gltf-model="#cb1" mixin="" position="9 0 0" rotation="0 0 45" scale="5 5 5" static-body></a-entity>
               
             </a-entity>
 
-            <a-entity id="cm91" mixin="cubemat m06" position="0 0 0" rotation="0 0 0" scale="5 5 5" dynamic-body></a-box>
-              
-            </a-entity>
-            <a-entity id="bodyx" gltf-model="#cb1" mixin="" position="9 0 0" rotation="0 0 45" scale="5 5 5" static-body></a-box><!--put spinning planes and mount the wheels on the planes-->
+            <a-entity id="cm91" mixin="cubemat m06" position="0 0 0" rotation="0 0 0" scale="5 5 5" dynamic-body></a-entity>
+            
+            <a-entity id="bodyx" gltf-model="#cb1" mixin="" position="9 0 0" rotation="0 0 45" scale="5 5 5" static-body><!--put spinning planes and mount the wheels on the planes-->
               
             </a-entity>
             <a-entity id="wheel1" gltf-model="#cb1" mixin="" position="9 0 0" rotation="0 0 45" scale="5 5 5" dynamic-body></a-box>
               
             </a-entity>
-            <!--<a-entity id="prim01" >
+            <a-entity id="prim01" >
                 <a-box position="0 0 0" rotation="0 0 0" width="1" depth="1" height="1" src="#m03" static-body></a-box>
               
             </a-entity>
@@ -1266,18 +1265,18 @@
             <a-entity id="prim03" >
                 <a-box position="0 4 0" rotation="0 0 0" width="1" depth="1" height="1" src="#m19" static-body></a-box>
                    
-            </a-entity>-->
+            </a-entity>
 
             
             
 
             <!--templates-->
-            <!--crankshaft
-            <a-entity id="rotorxx" position="-17.5 0 0" rotation="0 0 0" scale="1 1 1">
+            <!--crankshaft-->
+            <a-entity id="rotorxx" position="17.5 0 0" rotation="0 0 0" scale="1 1 1">
 
                 <a-entity id="flywheelx" gltf-model="#ccylx" material="wireframe:false" position="0 0 0" rotation="0 0 0" scale="10 10 10"
                           animation__rotation__xx="property: rotation; dir: forward; dur: 5000;
-              repeat: indefinite; easing: linear; loop: true; to: 360 0 0">
+                          repeat: indefinite; easing: linear; loop: true; to: 360 0 0">
 
                     <a-entity id="crank-throwx" position="0 0 0" rotation="0 90 0" layout="type: circle; radius: 0.25">
                         <a-entity id="poxs-one" gltf-model="#ccylx" scale=".5 .5 .5" rotation="0 90 0"><a-sphere id="sph1" position="0 0 0" rotation="0 0 0" scale=".1 .1 .1" material="wireframe:true;color:black"></a-sphere></a-entity>
@@ -1307,7 +1306,7 @@
 
             <a-lines points="0 0 0, 0 10 0" color="blue"></a-lines>
 
-            <a-entity lines="points: -10 0 0, 0 10 0, 10 0 0; color:blue"></a-entity>
+            <a-entity lines="points: -10 0 0, 0 10 0, 10 0 0; color:blue"></a-entity>-->
 
 
             <a-entity id="gg1" gltf-model="#cadboxx-floor" position="0 0 0" rotation="0 0 0" static-body visible="false"></a-entity>
@@ -1370,14 +1369,14 @@
 
             
             
-            <!--camera4 object impulse and drag and dropp ops -->
+            <!--camera4 object impulse and drag and drop ops -->
 
 
             <!--camera5 orbital cam for viewing and recording-->
 
             <!--camera6 intersection spawn camera for placing mmultiple blocks -->
 
-            <!--camera7 intersection spawn cam for placig models -->
+            <!--camera7 intersection spawn cam for placing models -->
             
             <!--camera8-->
 
@@ -1386,22 +1385,10 @@
 
 
             <!--camera10-->
-
-
-
-
-
-
-            
-            
-
             <a-entity id="cam10" active="false" camera universal-controls position="0 2 10" jump-ability kinematic-body>
                 <a-cursor></a-cursor>
             </a-entity>
-            <!--a-camera>
-             a-cursor></a-cursor>
-             Or <a-entity cursor></a-entity>
-            </!a-camera>-->
+          
             <a-sky color="#ECECEC"></a-sky>
         </a-scene>
     </div>
@@ -1683,7 +1670,7 @@
         
     </script>
     <script>
-            function cmm1() {//set position relative to object plane
+            function cmm1() {
                 var mainCameraEl = document.querySelector('#cam1');
                 mainCameraEl.setAttribute('camera', 'active', true);
 
